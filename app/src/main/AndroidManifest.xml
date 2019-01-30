@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.admin.travellog_ver30">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- android:allowBackup="false" : DB 저장 막기! -->
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/logo_launcher"
+        android:label="Travel Log"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".IntroActivity"
+            android:label="Travel Log">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ManualActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="._notUse.MainActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name="._notUse.MenuActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".map.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".map.ViewerActivity"
+            android:label="@string/title_activity_viewer" />
+        <activity android:name=".memo.MemoActivtiy" />
+        <activity
+            android:name=".map.InputTitlePopupActivtiy"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".memo.MemoPopupActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".memo.MemoViewActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".expnese.ExpensePopupActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".expnese.ExpenseViewActivtiy"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity android:name=".travel.TravelAddActivity" />
+        <activity android:name="._notUse.LoginActivity" />
+        <activity android:name="._notUse.LoginTestActivity" />
+        <activity android:name="._notUse.PasswordActivity" />
+        <activity android:name="._notUse.SettingActivity" />
+        <activity android:name=".TabsActivity" />
+        <activity android:name=".travel.TravelListActivity" />
+        <activity android:name="._notUse.UpdateDeletePopupActivity"></activity>
+    </application>
+
+</manifest>
